@@ -24,10 +24,9 @@ jobs:
     - name: Install samtools
       run: |      
          $source = 'https://github.com/samtools/samtools/releases/download/1.14/samtools-1.14.tar.bz2'
-         $destination = '10MB.zip'
+         $destination = 'samtools-1.14.tar.bz2'
          Invoke-WebRequest -Uri $source -OutFile $destination
-         wget https://github.com/samtools/samtools/releases/download/1.14/samtools-1.14.tar.bz2
-         bunzip2 samtools-1.14.tar.bz2
+         7z x -tbzip2 samtools-1.14.tar.bz2
          tar xvf samtools-1.14.tar
          cd samtools-1.14
          ./configure
