@@ -23,7 +23,7 @@ jobs:
 
     - name: add additional modules to MSYS2
       run: |
-        pacman -S gcc make base-devel zlib zlib-devel
+        C:\msys64\bin\pacman -S gcc make base-devel zlib zlib-devel
 
     - name: Install readItAndKeep
       run: |
