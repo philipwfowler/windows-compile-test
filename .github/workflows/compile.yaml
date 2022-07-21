@@ -21,10 +21,6 @@ jobs:
       run: |
         python3 -m pip install --upgrade pip
 
-    - name: add additional modules to MSYS2
-      run: |
-        C:\Windows\system32\cmd.exe /D /S /C D:\a\_temp\setup-msys2\msys2.cmd -c "'pacman' '-S' 'gcc' 'make' ' base-devel' 'zlib' 'zlib-devel'"
-
     - name: Install readItAndKeep
       run: |
         git clone https://github.com/GenomePathogenAnalysisService/read-it-and-keep.git
