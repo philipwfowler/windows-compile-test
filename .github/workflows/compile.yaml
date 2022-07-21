@@ -21,6 +21,10 @@ jobs:
       run: |
         python3 -m pip install --upgrade pip
 
+    - name: add additional modules to MSYS2
+      run: |
+        pacman -S gcc make base-devel zlib zlib-devel
+
     - name: Install readItAndKeep
       run: |
         git clone https://github.com/GenomePathogenAnalysisService/read-it-and-keep.git
